@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeHub - تصفح الوصفات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ربط ملف الجافا سكريبت كما طلب في المرحلة الثانية -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">RecipeHub 🍳</div>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="recipes.html" class="active">الوصفات</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+            <li><a href="login.html" class="btn-login">خروج</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h2 class="section-title">أحدث الوصفات</h2>
+        
+        <div class="recipes-grid">
+            
+            <!-- 🍕 كرت وصفة 1 (البيتزا) 🍕 -->
+            <div class="recipe-card">
+                <!-- 👈 هنا قمنا بإضافة الصورة بدلاً من الـ div القديم -->
+                <img src="pizza.jpg" alt="بيتزا إيطالية" class="recipe-img">
+                
+                <div class="recipe-info">
+                    <h3>بيتزا إيطالية مقرمشة</h3>
+                    <p>المكونات: دقيق، جبن موزاريلا، صلصة طماطم، ريحان...</p>
+                    <span class="time">⏱️ 25 دقيقة</span>
+                </div>
+            </div>
+
+            <!-- 🇸🇦 كرت وصفة 2 (الكبسة) 🇸🇦 -->
+            <div class="recipe-card">
+                <!-- 👈 هنا قمنا بإضافة الصورة بدلاً من الـ div القديم -->
+                <img src="kabsa.jpg" alt="كبسة دجاج" class="recipe-img">
+                
+                <div class="recipe-info">
+                    <h3>كبسة دجاج خليجية</h3>
+                    <p>المكونات: أرز بسمتي، دجاج، بهارات كبسة، مكسرات...</p>
+                    <span class="time">⏱️ 50 دقيقة</span>
+                </div>
+            </div>
+
+            <!-- 🥗 كرت وصفة 3 (السلطة) 🥗 -->
+            <div class="recipe-card">
+                <!-- 👈 هنا قمنا بإضافة الصورة بدلاً من الـ div القديم -->
+                <img src="salad.jpg" alt="سلطة كينوا" class="recipe-img">
+                
+                <div class="recipe-info">
+                    <h3>سلطة كينوا صحية</h3>
+                    <p>المكونات: كينوا، خيار، طماطم، زيت زيتون، ليمون...</p>
+                    <span class="time">⏱️ 15 دقيقة</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
