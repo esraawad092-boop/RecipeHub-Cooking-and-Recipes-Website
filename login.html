@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// إذا كان المستخدم مسجل دخول بالفعل، وجهه فوراً للرئيسية
+if (isset($_SESSION['user_email'])) {
+    header("Location: index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -12,22 +21,23 @@
         <h2>تسجيل الدخول إلى RecipeHub</h2>
         <p>اكتشف وأطبخ أشهى الوصفات</p>
         
-        <form action="#">
+        <!-- التوجيه إلى ملف معالجة تسجيل الدخول -->
+        <form id="loginForm" action="login_process.php" method="POST">
             <div class="input-group">
                 <label for="email">البريد الإلكتروني</label>
-                <input type="email" id="email" required placeholder="example@mail.com">
+                <input type="email" id="email" name="email" required placeholder="example@mail.com">
             </div>
             
             <div class="input-group">
                 <label for="password">كلمة المرور</label>
-                <input type="password" id="password" required placeholder="********">
+                <input type="password" id="password" name="password" required placeholder="********">
             </div>
             
-            <!-- زر الدخول ينقلنا للصفحة الرئيسية مباشرة حسب اشتراطات المرحلة الأولى -->
-            <a href="index.html" class="btn-submit">دخول</a>
+            <button type="submit" class="btn-submit">دخول</button>
         </form>
     </div>
+
+    <!-- استدعاء ملف الجافا سكريبت -->
     <script src="js/main.js"></script>
-</body>
 </body>
 </html>
